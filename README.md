@@ -17,6 +17,9 @@ _An ASP.NET MVC web application to manage a bakery using a many-to-many database
 | Authorized users can create, read, update, and delete all flavors in the flavor table of the Pierre's Treats database. |
 | Authorized users can create, read, update, and delete all treates in the treats table of the Pierre's Treats database. |
 
+## Database Schema
+
+![Schema Preview](/PierresTreats/wwwroot/img/db-schema.png)
 
 ## Setup/Installation Requirements
 
