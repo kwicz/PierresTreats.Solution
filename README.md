@@ -85,7 +85,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _EF Core 2.2.6_
 * _ASP.NET Core Identity_
 * _Razor 2.2.0_
-* _Material Design Lite_
+* _[Material Design Lite](https://getmdl.io/)_
 
 ## License
 
