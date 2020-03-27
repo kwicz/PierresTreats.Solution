@@ -62,7 +62,7 @@ In your terminal, type:
 ```sh
 dotnet watch run
 ```
-Then hold ```command``` while clicking the link in your local terminal to your local address, which should be:
+Hold ```command``` while clicking the link in your local terminal to your local address, which should be:
 ```sh
 http://127.0.0.1:5000
 ```
