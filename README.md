@@ -7,18 +7,15 @@
 
 _An ASP.NET MVC web application to manage a bakery using a many-to-many database structure._
 
-## Program User Stories
+## Program Specifications
 
-| Specification | Example Input | Example Output |
-| ------------- |:-------------:| -------------------:|
-| Librarian user can create, read, update, delete, and list books in a catalog inventory.| New book including title, and author is entered | Book and details available to view and edit in library |
-| Librarian user can search for a book by author or title | Librarian inputs title | Book is displayed with author details  |
-| Librarian user can enter multiple authors for a book | Librarian edits book to add additional authors | Multiple authors displayed with book details |
-| Patron user can checkout a book from library database | Patron checks out 1 book  | Number of copies for that specific book decreases by 1|
-| Patron user can check how many copies of a particular book are available | Patron searches for book | Book details displays number of copies available|
-| Patron user can see a history of all books they've checked out | Patron logs into account | Patron can view entire checkout history |
-| Patron user can check when a book they've checked out is due | Patron clicks on checkout item | Due date is displayed |
-| Librarian user can see a list of all overdue books | Librarian views overdue library books| Overdue books are displayed | 
+| User Stories |
+| ------------- |
+| All users can view the application landing page, which will feature all available flavors and treats. |
+| All users can click treats and flavors on the landing page, and be directed to a new pages which lists all of the treats belonging to that falvor, or vice versa. |
+| Authorized users can log in while on the landing page. |
+| Authorized users can create, read, update, and delete all flavors in the flavor table of the Pierre's Treats database. |
+| Authorized users can create, read, update, and delete all treates in the treats table of the Pierre's Treats database. |
 
 
 ## Setup/Installation Requirements
