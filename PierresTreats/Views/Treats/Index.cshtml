@@ -6,16 +6,49 @@
 @using System.Security.Claims
 @model IEnumerable<PierresTreats.Models.Treat>
 
-<h1>Treats for @User.Identity.Name</h1>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <div class="mdl-card">
+      <div class="mdl-card__media">
+        <h1>Today's Menu</h1>
+      </div>
+      <div class="mdl-card__supporting-text">
+        @if (Model.Any())
+        {
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <tbody>
+              @foreach (Treat treat in Model)
+              {
+                <tr>
+                <td class="mdl-data-table__cell--non-numeric">@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</td>
+                  <td>@treat.Cost</td>
+              </tr>
+              }
+              </tbody>
+            </table>
+          }
+          else
+          {
+            <h3>Our greatest apologies, but we have sold out.</h3>
+          }
+      </div>
+      <div class="mdl-card__actions">
+        <p>@Html.ActionLink("Add new treat", "Create")</p>
+        <p>@Html.ActionLink("Home", "Index", "Home")</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
 
 @if (Model.Any())
 {
-  <ul>
     @foreach (Treat treat in Model)
     {
       <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
     }
-  </ul>
 } 
 else
 {

@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url(../img/sprinkle.jpg);
+  background-image: url(https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80);
   background-size: cover;
   font-family: Montserrat;
 }
@@ -44,6 +44,7 @@ h1, .mdl-layout-title {
 
 .mdl-card__title-text {
   font-family: Sacramento;
+  text-align: center;
 }
 
 .mdl-card {

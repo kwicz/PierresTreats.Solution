@@ -4,16 +4,37 @@
 
 @model PierresTreats.Models.Treat
 
-<h4>Add a new treat</h4>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <div class="mdl-card">
+      <div class="mdl-card__media">
+        <h1>Add a New Menu Item</h1>
+      </div>
+      <div class="mdl-card__supporting-text">
+        @using (Html.BeginForm())
+        {
+          <div>
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name)
+          </div>
+          <div>
+            @Html.Label("Select Flavor")
+            @Html.DropDownList("FlavorId")
+          </div>
+          <div>
+            @Html.LabelFor(model => model.Cost)
+            @Html.EditorFor(model => model.Cost)
+          </div>
+          <div>
+            <input type="submit" value="Add new treat" class="btn btn-default" />
+          </div> 
+        }
+      <div class="mdl-card__actions">
+        <p>@Html.ActionLink("Show all treats", "Index")</p>
+      </div>
+    </div>
 
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-
-    @Html.Label("Select Flavor")
-    @Html.DropDownList("FlavorId")
-
-    <input type="submit" value="Add new treat" class="btn btn-default" />
-}
-<p>@Html.ActionLink("Show all treats", "Index")</p>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"></div>
+</div>

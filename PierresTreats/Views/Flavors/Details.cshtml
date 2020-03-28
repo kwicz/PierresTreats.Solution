@@ -4,25 +4,34 @@
 
 @model PierresTreats.Models.Flavor;
 
-<h2>Flavor Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-
-@if(@Model.Treats.Count == 0)
-{
-  <p>This Flavor does not contain any Treats</p>
-}
-else
-{
-  <h4>Treats the Flavor contains:</h4>
-  <ul>
-  @foreach(var join in Model.Treats)
-  {
-    <li>@join.Treat.Name</li>
-  }
-  </ul>
-}
-
-<p>@Html.ActionLink("Back to categories", "Index")</p>
-<p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
-<p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col">
+    <div class="mdl-card">
+      <div class="mdl-card__media">
+        <h1 class="mdl-card__title-text">Pierre's @Model.Name</h1>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <p>@Model.Description</p>
+        @if(@Model.Treats.Count == 0)
+          {
+            <p>We are not currently featuring this flavor profile in any of our baked delights.</p>
+          }
+          else
+          {
+            <p>You can currently find this flavor profile in:</p>
+            @foreach(var join in Model.Treats)
+            {
+              <h4>@join.Treat.Name</h4>
+            }
+          }
+      </div>
+      <div class="mdl-card__actions">
+        <p>@Html.ActionLink("Back to categories", "Index")</p>
+        <p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
+        <p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
