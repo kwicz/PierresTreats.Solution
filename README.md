@@ -86,6 +86,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _ASP.NET Core Identity_
 * _Razor 2.2.0_
 * _[Material Design Lite](https://getmdl.io/)_
+* _Photo by Jordane Mathieu on Unsplash_
 
 ## License
 

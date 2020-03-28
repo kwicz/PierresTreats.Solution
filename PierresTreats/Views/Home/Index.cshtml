@@ -2,7 +2,47 @@
   Layout = "_Layout";
 }
 
+@using PierresTreats.Models;
+@model IEnumerable<PierresTreats.Models.Treat>
+
 <h1>Welcome to Pierre's Treats!</h1>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">4
+    <div class="mdl-card">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Today's Treats</h2>
+  </div>
+  <div class="mdl-card__media">
+    <img src="https://images.unsplash.com/photo-1541782432180-e4371d7e1a47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="220" height="140" border="0" alt="" style="padding:20px;">
+  </div>
+  <div class="mdl-card__supporting-text">
+
+  </div>
+  <div class="mdl-card__actions">
+    <a href="(URL or function)">Related Action</a>
+  </div>
+</div>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">4
+    <div class="mdl-card">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Featured Flavors</h2>
+  </div>
+  <div class="mdl-card__media">
+    <img src="https://images.unsplash.com/photo-1541781550486-81b7a2328578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="220" height="140" border="0" alt="" style="padding:20px;">
+  </div>
+  <div class="mdl-card__supporting-text">
+    This text might describe the photo and provide further information, such as where and
+    when it was taken.
+  </div>
+  <div class="mdl-card__actions">
+    <a href="(URL or function)">Related Action</a>
+  </div>
+</div>
+  </div>
+
+</div>
 <p>@Html.ActionLink("See all Flavors", "Index", "Flavors")</p>
 <p>@Html.ActionLink("See all Treats", "Index", "Treats")</p>
 <p>@Html.ActionLink("Create an account", "Index", "Account")</p>

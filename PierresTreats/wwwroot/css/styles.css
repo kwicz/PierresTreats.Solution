@@ -5,7 +5,13 @@
 .demo-layout-transparent .mdl-layout__drawer-button {
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
-  color: rgba(0, 0, 0, 0.87);
+  color: whitesmoke;
+}
+
+body {
+  background-image: url(../img/sprinkle.jpg);
+  background-size: cover;
+  font-family: Montserrat;
 }
 
 div#footer {
@@ -20,4 +26,26 @@ div#footer {
 
 main.mdl-layout__content {
   text-align: center;
+}
+
+h1, .mdl-layout-title {
+  font-family: Sacramento;
+  font-weight: 600px;
+  color: antiquewhite;
+}
+
+.drawer-title {
+  background-color: darkorange;
+}
+
+.section {
+  display: inline-block;
+}
+
+.mdl-card__title-text {
+  font-family: Sacramento;
+}
+
+.mdl-card {
+  background-color: antiquewhite;
 }
