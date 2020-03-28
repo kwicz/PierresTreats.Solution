@@ -24,7 +24,18 @@
           <a class="mdl-navigation__link" href="/">Home</a>
           <a class="mdl-navigation__link" href="/Flavors">Flavors</a>
           <a class="mdl-navigation__link" href="/Treats">Treats</a>
-          <a class="mdl-navigation__link" href="/Account/Login">Login</a>
+          @if (User.Identity.IsAuthenticated)
+          {
+            @using (Html.BeginForm("LogOff", "Account"))
+            {
+              <input type="submit" value="Log out" />
+            }
+          }
+          else
+          {
+            <a class="mdl-navigation__link" href="/Account/Login">Sign In</a>
+          }
+          
         </nav>
       </div>
     </header>
@@ -34,7 +45,6 @@
         <a class="mdl-navigation__link" href="/">Home</a>
         <a class="mdl-navigation__link" href="/Flavors">Flavors</a>
         <a class="mdl-navigation__link" href="/Treats">Treats</a>
-        <a class="mdl-navigation__link" href="/Account/Login">Login</a>
       </nav>
     </div>
     <main class="mdl-layout__content wrapper">

@@ -16,8 +16,15 @@
   <div class="mdl-card__media">
     <img src="https://images.unsplash.com/photo-1558538337-aab544368de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" width="220" height="140" border="0" alt="" style="padding:20px;">
   </div>
-  <div class="mdl-card__actions">
-    <p>@Html.ActionLink("See all Flavors", "Index", "Flavors")</p>
+  <div class="mdl-card__supporting-text">
+    @if (ViewBag.flavors.Count == 0)
+    {
+      <h3>We apologize, but we are not currently featuring any specific flavors.</h3>
+    }
+    @foreach (Flavor flavor in @ViewBag.flavors)
+    {
+      <p>@Html.ActionLink($"{flavor.Name}", "Details", "Flavors", new { id = flavor.FlavorId })</p>
+    }
   </div>
 </div>
   </div>
@@ -30,8 +37,15 @@
   <div class="mdl-card__media">
     <img src="https://images.unsplash.com/photo-1541781550486-81b7a2328578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" width="220" height="140" border="0" alt="" style="padding:20px;">
   </div>
-  <div class="mdl-card__actions">
-    <p>@Html.ActionLink("See all Treats", "Index", "Treats")</p>
+  <div class="mdl-card__supporting-text">
+    @if (Model.Count() == 0)
+    {
+      <h3>We apologize, but we have sold out for the day.</h3>
+    } 
+    @foreach (Treat treat in Model)
+    {
+      <p>@Html.ActionLink($"{treat.Name}", "Details", "Treats", new { id = treat.TreatId })</p>
+    }
   </div>
 </div>
   </div>
