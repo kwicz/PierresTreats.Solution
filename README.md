@@ -7,6 +7,10 @@
 
 _An ASP.NET MVC web application to manage a bakery using a many-to-many database structure._
 
+## Application Preview
+
+![Landing Page Preview](/PierresTreats/wwwroot/img/landing-page.png)
+
 ## Program Specifications
 
 | User Stories |
