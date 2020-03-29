@@ -16,7 +16,7 @@ _An ASP.NET MVC web application to manage a bakery using a many-to-many database
 | User Stories |
 | ------------- |
 | All users can view the application landing page, which will feature all available flavors and treats. |
-| All users can click treats and flavors on the landing page, and be directed to a new pages which lists all of the treats belonging to that falvor, or vice versa. |
+| All users can click treats and flavors on the landing page, and be directed to a new pages which lists all of the treats belonging to that flavor, or vice versa. |
 | Authorized users can log in while on the landing page. |
 | Authorized users can create, read, update, and delete all flavors in the flavor table of the Pierre's Treats database. |
 | Authorized users can create, read, update, and delete all treates in the treats table of the Pierre's Treats database. |

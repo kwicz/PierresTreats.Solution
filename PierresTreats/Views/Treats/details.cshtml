@@ -30,9 +30,16 @@
           }
       </div>
       <div class="mdl-card__actions">
-        <p>@Html.ActionLink("Home", "Index", "Home")</p>
-        <p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
-        <p>@Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
+        @if (User.Identity.IsAuthenticated)
+        {
+          <p>@Html.ActionLink("Home", "Index", "Home")</p>
+          <p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
+          <p>@Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
+        }
+        else
+        {
+          <p>@Html.ActionLink("Home", "Index", "Home")</p>
+        }
       </div>
     </div>
   </div>
