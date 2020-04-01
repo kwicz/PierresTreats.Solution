@@ -22,13 +22,6 @@ namespace PierresTreats.Controllers
       _db = db;
     }
 
-    // public ActionResult Index()
-    // {
-    //   var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-    //   var currentUser = await _userManager.FindByIdAsync(userId);
-    //   var userTreats = _db.Treats.Where(entry => entry.User.Id == currentUser.Id);
-    //   return View(userTreats);
-    // }
     public ActionResult Index()
     {
       List<Treat> model = _db.Treats.Include(treats => treats.Flavors).ToList();
